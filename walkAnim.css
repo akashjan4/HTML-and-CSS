@@ -1,0 +1,27 @@
+body
+{
+
+}
+
+.sprite
+{
+    width: 40px;
+    height: 60px;
+    display:block;
+    background:transparent url(walkImg/mario-sprites.png) 0 0 no-repeat;
+    margin:3em auto;
+    animation :runMario 3s steps(27) infinite, move-mario 3s 0s cubic-bezier(0.42, 0, 0, 0.62) infinite backwards;
+}
+
+@keyframes runMario
+{
+    0%{background-position:0 0;}
+    100%{background-position: -1080px 0;}
+
+}
+@keyframes move-mario {
+    0%   { transform: translateY(100px); }
+    20%  {transform: translateY(100px); }
+    50%  {transform: translateX(300px); }
+    100% {transform: translateX(300px);  }
+}

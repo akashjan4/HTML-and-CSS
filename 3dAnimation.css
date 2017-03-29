@@ -1,0 +1,43 @@
+body {
+    background-color: #d34755;
+    font: 'Alfa Slab One', cursive;
+}
+
+div {
+    width: 80%;
+    margin: 4em auto;
+    text-align: center;
+    perspective:800px;
+}
+
+
+span {
+    display: inline-block;
+    color: #ffffff;
+    font-weight:800;
+    font-size:2.5em;
+    transform-origin:30% 50%;
+}
+
+
+span:nth-child(odd)
+{
+     animation:filpUp 2s cubic-bezier(0.51, 0.16, 0.93, 0.48) both;
+
+}
+span:nth-child(even)
+{
+    animation:filpUp 2s .5s cubic-bezier(0.51, 0.16, 0.93, 0.48) both;    
+}
+
+@keyframes filpUp
+{
+    from {
+ 
+        transform: rotateX(90deg);
+
+    }
+    to{
+        transform:rotateX(0deg);
+    }
+}

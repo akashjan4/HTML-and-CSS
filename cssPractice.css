@@ -1,0 +1,129 @@
+body {
+    background-image: url(img/background.png);
+    background-size: cover;
+    background-position: 0 -250px;
+    margin: 0;
+}
+
+.wrapper {
+    /* margin: 20em auto 2em auto; for sky*/
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+.robot {
+    animation-name: roboSlide;
+    animation-duration: 2s;
+    /* animation-timing-function:ease-in;*/ /* http://cubic-bezier.com/#0,0,1,1 */
+    animation-timing-function: cubic-bezier(1,.23,.42,.86);
+    animation-iteration-count: 1;
+    /*-----------------*/
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    /*-----------------
+      animation-direction:alternate-reverse;*/
+}
+
+@keyframes roboSlide {
+    from {
+        transform: translateX(0);
+        width: 80px;
+    }
+
+    to {
+        transform: translateX(800px);
+        width: 60px;
+    }
+}
+
+.ball {
+    animation-name: ballRoll;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /*-----------------*/
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    /*-----------------*/
+}
+
+@keyframes ballRoll {
+    0% {
+        transform: translateX(100px) rotate(0turn);
+    }
+
+    20% {
+        transform: translate(-10px) rotate(-0.5turn);
+    }
+
+    100% {
+        transform: translate(450px) rotate(2turn);
+    }
+}
+
+.sky {
+    width: 100%;
+    height: 450px;
+    background: transparent url(img/sky.jpg) 0 0 no-repeat;
+    background-size: 100% 100%;
+    margin: auto;
+    position: relative;
+}
+
+.cloud {
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    background: transparent url(img/front_cloud.png) 0 0 no-repeat;
+}
+
+.fcloud01 {
+    top: 100px;
+    z-index: 100;
+    animation-name: cloudDrift;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation:cloudDrift  25s linear infinite;*/
+}
+
+.fcloud02 {
+    top: 240px;
+    z-index: 200;
+    animation: cloudDrift 35s 2s linear infinite backwards;
+    /* animation-name animation-duration animation-delay animation-timing-function animation-iteration-count animation-fill-mode*/
+}
+
+@keyframes cloudDrift {
+    from {
+        transform: translateX(-255px);
+    }
+
+    to {
+        transform: translateX(1350px);
+    }
+}
+
+.btn-primary {
+    cursor: pointer;
+    background-color: #ff8d35;
+    color: white;
+    font-weight: 500;
+    font-size: 0.8em;
+    border: none;
+    padding: 1em 3em;
+    margin: 2em auto;
+    display: block;
+    transition: background .5s ease-in, transform .6s .25s ease-in-out, font-weight .7s .21s ease-out;
+    /*take .5s sec to do the transition in this case for background color
+        transform duration om .6s and delay of .25s 
+    */
+}
+
+    .btn-primary:hover {
+        background: #c61140;
+        transform: scale(1.2);
+        font-weight: 900;
+    }
