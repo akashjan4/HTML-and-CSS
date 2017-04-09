@@ -1,0 +1,116 @@
+@import url('http://fonts.googleapis.com/css?family=Raleway');
+body
+{
+    margin:0;
+    padding: 0;
+    background: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    width: 100%;
+}
+.navtop
+{
+    background: #06AB9D;
+    height: 50px;
+    width:100%;
+     
+}
+.navtop .brand-name
+{
+    color: #fff;
+    font-weight: 400;
+    font-size: 2em;
+    position: relative;
+    left: 2%;
+    bottom: 15%;
+}
+ .navtop .seprator
+ {
+    border-right: 1px solid #fff;
+    font-size: 1.6em;
+ }
+.navtop  a{
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    font-size: 1.2em;
+    color: #fff;
+    background: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    left: 2%;
+    bottom: 22%;
+    margin: 0 .4em;
+    padding: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    transition:background 0.5s ease-in, borderRight 0.5s ease-in;
+}
+
+.navtop a:hover{
+    background: rgba(255, 255, 255, 0.28);
+    color:#fff;
+    transform: scale(1);
+}
+.pad-0
+{
+    padding:0;
+} 
+.pad-5
+{
+    padding: 5px;
+}
+.info-container
+{
+    background: #89bdd3;
+    height: 420px;
+    color: #fff;
+}
+.info-container .heading
+{
+  
+   position: relative;
+   left: 22%;
+   font-size: 1.5em;
+   width: 90%;
+
+}
+.mrg-btm-5
+{
+    margin-bottom: 5px;
+}
+.heading .border-btm{
+ border-bottom-color: #fff;
+ border-bottom-style: solid;
+ border-bottom-width: 2px;
+ width:89.5%;
+}
+
+.summary-container
+{
+    border-width:0 0  0 2px;
+    border-style:  solid;
+    border-color: #FFF;
+    height: 420px;
+    background: #89bdd3;
+}
+.footer
+{
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+} 
+.footer .brand-name
+{
+    font-size:1.2em;
+    display: inline-block;
+    margin: 0 .4em;
+    padding: 1em;
+    position:relative;
+    top:1%;
+    vertical-align: middle;
+}
+.footer a{
+    bottom:0;
+}
+/*#453466;*/
